@@ -1,0 +1,4 @@
+org.springframework.boot.autoconfigure.EnableAutoConfiguration=\
+  com.hujy.rock.lock.aspect.DistLockAspect,\
+  com.hujy.rock.lock.config.application.ApplicationContextConfig,\
+  com.hujy.rock.lock.config.redisson.RedissonConfig
