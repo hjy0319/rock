@@ -19,7 +19,6 @@ public class RedissonDistLock implements DistLockApi {
 
     private RedissonClient redissonClient;
 
-
     public RedissonDistLock() {
         this.redissonClient = ApplicationContextConfig.getClass(RedissonClient.class);
     }

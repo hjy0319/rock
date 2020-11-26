@@ -176,10 +176,11 @@ public class DistLockAspect {
 
     /**
      * 获取实现类对象
-     * @author hujy
-     * @date 2020-11-18 14:18
+     *
      * @param type
      * @return com.hujy.rock.lock.api.DistLockApi
+     * @author hujy
+     * @date 2020-11-18 14:18
      */
     private DistLockApi getLockImpl(String type) {
         log.info("lock type -> {}", type);

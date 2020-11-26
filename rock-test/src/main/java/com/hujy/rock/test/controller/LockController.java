@@ -66,8 +66,10 @@ public class LockController {
     public String testTimeout(TestParam t) {
         if (t.getMode() == 1) {
             lockService.testByRedisson(t);
-        } else {
+        } else if (t.getMode() == 2){
             lockService.testByJedis(t);
+        } else {
+            lockService.testByZookeeper(t);
         }
 
         return "ok";

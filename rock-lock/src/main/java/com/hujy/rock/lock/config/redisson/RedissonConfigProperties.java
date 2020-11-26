@@ -1,8 +1,6 @@
 package com.hujy.rock.lock.config.redisson;
 
 import lombok.Data;
-import lombok.Getter;
-import lombok.Setter;
 import org.springframework.boot.context.properties.ConfigurationProperties;
 
 import java.util.List;
@@ -10,7 +8,7 @@ import java.util.List;
 /**
  * redisson连接属性
  */
-@ConfigurationProperties(prefix = "rock.redisson",ignoreUnknownFields = false)
+@ConfigurationProperties(prefix = "rock.redisson", ignoreUnknownFields = false)
 @Data
 public class RedissonConfigProperties {
 

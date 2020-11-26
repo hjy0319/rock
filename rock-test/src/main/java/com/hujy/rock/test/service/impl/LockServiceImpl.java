@@ -30,7 +30,7 @@ public class LockServiceImpl implements LockService {
     }
 
     @Override
-    @DistLock(lockType = DistLockType.JEDIS, lockKey = "#id", waitTime = 60, expireTime = 60)
+    @DistLock(lockType = DistLockType.LETTUCE, lockKey = "#id", waitTime = 60, expireTime = 60)
     public void incrByJedis(String id) {
         total ++;
     }
@@ -46,12 +46,18 @@ public class LockServiceImpl implements LockService {
     }
 
     @Override
-    @DistLock(lockType = DistLockType.JEDIS, lockKey = "#t.id", waitTime = 60, expireTime = 60)
+    @DistLock(lockType = DistLockType.LETTUCE, lockKey = "#t.id", waitTime = 60, expireTime = 60)
     public void testByJedis(TestParam t) {
         try {
             Thread.sleep(t.getNum());
         } catch (InterruptedException e) {
             e.printStackTrace();
         }
+    }
+
+    @Override
+    @DistLock(lockType = "zookeeper", lockKey = "#t.id", waitTime = 60, expireTime = 60)
+    public void testByZookeeper(TestParam t) {
+        System.out.println("zk");
     }
 }
