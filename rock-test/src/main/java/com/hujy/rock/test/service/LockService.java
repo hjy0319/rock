@@ -20,4 +20,6 @@ public interface LockService {
     void testByRedisson(TestParam t);
 
     void testByJedis(TestParam t);
+
+    void testByZookeeper(TestParam t);
 }

@@ -1,0 +1,1 @@
+zookeeper=com.hujy.rock.test.api.impl.ZooKeeperDistLock

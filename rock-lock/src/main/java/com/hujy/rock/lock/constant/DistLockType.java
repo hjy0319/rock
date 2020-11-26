@@ -13,6 +13,4 @@ public class DistLockType {
 
     public static final String LETTUCE = "lettuce";
 
-    public static final String ZOOKEEPER = "zookeeper";
-
 }
